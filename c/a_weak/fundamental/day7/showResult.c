@@ -3,6 +3,6 @@
 
 extern int ans;
 
-void showResult() {
+void showAnswer() {
     printf("%d\n", ans);
 }

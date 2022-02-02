@@ -3,4 +3,4 @@
 
 void showAnswer();
 
-#endif
+#endif // _SHOW_RESULT_H_

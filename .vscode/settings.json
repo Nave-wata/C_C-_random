@@ -1,5 +1,9 @@
 {
     "cSpell.words": [
         "Cpurapura"
-    ]
+    ],
+    "files.associations": {
+        "showresult.h": "c",
+        "calc2.h": "c"
+    }
 }

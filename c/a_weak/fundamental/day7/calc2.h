@@ -4,4 +4,4 @@
 void add(int, int);
 void sub(int, int);
 
-#endif
+#endif // _CALC2_H_
