@@ -5,10 +5,10 @@ void main() {
     int *p = NULL;
     int i;
 
-    p = nums;
+    p = nums + 5 - 1;
     for (i = 0; i < 5; i++) {
         printf("%d ", *p);
-        p++;
+        p--;
     }
     printf("\n");
 }
