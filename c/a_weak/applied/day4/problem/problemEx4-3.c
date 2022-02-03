@@ -5,6 +5,7 @@ void main() {
     int *array = NULL;
     int i;
 
+    array = (int*)malloc(sizeof(int) * 10);
     for (i = 0; i < 10; i++) {
         array[i] = i;
     }
@@ -13,4 +14,5 @@ void main() {
         printf("%d ", array[i]);
     }
     printf("\n");
+    free(array);
 }
