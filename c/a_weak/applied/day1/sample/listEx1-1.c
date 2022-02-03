@@ -9,5 +9,5 @@ void main() {
     a = rand() % 10 + 1;
     b = rand() % 10 + 1;
 
-    printf("a = %d, b = %d\n", a, b);
+    printf("a + b = %d\n", a + b);
 }
