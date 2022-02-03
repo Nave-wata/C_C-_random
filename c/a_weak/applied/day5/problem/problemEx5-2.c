@@ -29,4 +29,5 @@ void showStr(char* a) {
         printf("%c", *a);
         a++;
     }
+    printf("\n");
 }
