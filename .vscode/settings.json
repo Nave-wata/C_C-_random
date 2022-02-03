@@ -4,6 +4,7 @@
     ],
     "files.associations": {
         "showresult.h": "c",
-        "calc2.h": "c"
+        "calc2.h": "c",
+        "calc.h": "c"
     }
 }
