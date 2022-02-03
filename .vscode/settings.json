@@ -1,6 +1,7 @@
 {
     "cSpell.words": [
-        "Cpurapura"
+        "Cpurapura",
+        "funcp"
     ],
     "files.associations": {
         "showresult.h": "c",
