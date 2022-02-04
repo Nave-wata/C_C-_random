@@ -21,4 +21,5 @@ void main() {
     scanf("%f", &(v2.y));
 
     printf("(%f, %f) + (%f, %f) = (%f, %f)\n", v1.x, v1.y, v2.x, v2.y, (v1.x + v2.x), (v1.y + v2.y));
+    printf("(%f, %f) - (%f, %f) = (%f, %f)\n", v1.x, v1.y, v2.x, v2.y, (v1.x - v2.x), (v1.y - v2.y));
 }
