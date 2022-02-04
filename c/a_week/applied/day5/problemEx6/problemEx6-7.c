@@ -15,7 +15,7 @@ typedef struct {
 void goukei(kakei*);
 
 void main() {
-    int i;
+    int i, max;
     kakei data[SIZE];
 
     for (i = 0; i < SIZE; i++) {
@@ -58,9 +58,29 @@ void main() {
     data[4].others = 63500;
     data[5].others = 67000;
 
+    printf("各月の出費の合計\n");
+    printf("---------------\n");
     for (i = 0; i < SIZE; i++) {
         goukei(&data[i]);
     }
+
+    printf("医療費の最も多い月 : ");
+    max = 0;
+    for (i = 1; i < SIZE; i++) {
+        if (data[max].medical < data[i].medical) {
+            max = i;
+        }
+    }
+    printf("%d 月\n", data[max].month);
+
+    printf("食費の最も多い月と金額 : ");
+    max = 0;
+    for (i = 1; i < SIZE; i++) {
+        if (data[max].food < data[i].food) {
+            max = i;
+        }
+    }
+    printf("%d月, %d\n", data[max].month, data[max].food);
 }
 
 void goukei(kakei* data) {
