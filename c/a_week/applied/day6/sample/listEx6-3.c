@@ -6,7 +6,7 @@ void main() {
     int c;
     file = fopen("./../random/sample.txt", "r");
     if (file == NULL) {
-        printf("File is not found\n");
+        printf("File is not open\n");
         exit(1);
     }
 
