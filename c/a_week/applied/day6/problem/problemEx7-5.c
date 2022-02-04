@@ -23,7 +23,7 @@ void main() {
             num += c - '0';
             num *= 10;
         }
-    };
+    }
     fclose(file);
     printf("---------\n");
     printf("合計%d\n", sum);
