@@ -37,8 +37,8 @@ void setTime(Time* time,int hour,int minute,int second) {
 int getDiffMinute(Time* start,Time* end) {
     int endTime, startTime;
 
-    endTime = end -> hour * 3600 + end -> minute * 60 + end -> second;
-    startTime = start -> hour * 3600 + start -> minute * 60 + start -> second;
+    endTime = end->hour * 3600 + end->minute * 60 + end->second;
+    startTime = start->hour * 3600 + start->minute * 60 + start->second;
 
     return endTime - startTime;
 }
