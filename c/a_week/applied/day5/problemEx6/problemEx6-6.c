@@ -13,9 +13,8 @@ typedef struct {
 void sum(student_data*);
 
 void main() {
-    int i;
-    int sums[5];
-    student_data data[5];
+    int i, j;
+    student_data data[5], tmp_data;
 
     // id
     for (i = 0; i < 5; i++) {
@@ -59,6 +58,16 @@ void main() {
 
     for (i = 0; i < 5; i++) {
         sum(&data[i]);
+    }
+
+    for (i = 1; i < 5; i++) {
+        j = i;
+        while((0 < j) && (data[j - 1].sum < data[j].sum)) {
+            tmp_data = data[j - 1];
+            data[j - 1] = data[j];
+            data[j] = tmp_data;
+            j--;
+        }
     }
 
     printf("番号  国語  数学  理科  社会  英語  合計\n");
