@@ -1,9 +1,7 @@
 #include <iostream>
 
-using namespace std;
-
 int main() {
-    cout << "Programing in C++ language" << endl;
+    std::cout << "Programing in C++ language" << std::endl;
 
     return 0;
 }
