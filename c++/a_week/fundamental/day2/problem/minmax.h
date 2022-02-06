@@ -3,8 +3,8 @@
 
 class MinMax {
     public:
-        int min(int, int);
-        int max(int, int);
+        int min(int, int, int);
+        int max(int, int, int);
 };
 
 #endif // _MINMAX_H_
