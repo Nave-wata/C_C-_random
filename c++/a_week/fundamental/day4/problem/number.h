@@ -7,6 +7,8 @@ class Number {
         int b;
 
     public:
+        Number();
+        ~Number();
         void setNumbers(int, int);
         int getAdd();
 };

@@ -11,5 +11,7 @@ int main() {
 
     cout << pN->getAdd() << endl;
 
+    delete pN;
+
     return 0;
 }
