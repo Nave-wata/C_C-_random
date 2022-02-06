@@ -4,6 +4,7 @@
 class CCalcs {
     public:
         int add();
+        int sub();
         int a;
         int b;
 };

@@ -10,6 +10,7 @@ int main() {
     calc.b = 3;
 
     cout << calc.a << " + " << calc.b << " = " << calc.add() << endl;
+    cout << calc.a << " + " << calc.b << " = " << calc.sub() << endl;
 
     return 0;
 }
