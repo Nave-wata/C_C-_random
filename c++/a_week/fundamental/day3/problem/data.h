@@ -9,6 +9,10 @@ using namespace std;
 class Data {
     public:
         void init();
+        void setNumber(int);
+        void setComment(string);
+        int getNumber();
+        string getComment();
 
     private:
         int number;
