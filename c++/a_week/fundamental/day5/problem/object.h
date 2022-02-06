@@ -8,6 +8,7 @@ class Object {
     public:
         Object();
         ~Object();
+        static int getObjectNum();
 };
 
 #endif // _OBJECT_H_

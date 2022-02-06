@@ -9,3 +9,7 @@ Object::Object() {
 Object::~Object() {
     m_objectNum--;
 }
+
+int Object::getObjectNum() {
+    return m_objectNum;
+}

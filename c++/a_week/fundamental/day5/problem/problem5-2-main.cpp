@@ -10,11 +10,11 @@ int main() {
     o2 = new Object();
     o3 = new Object();
 
-    cout << "オブジェクトの数: " << Object::getObjectNum() <<endl;
+    cout << "オブジェクトの数: " << Object::getObjectNum() << endl;
     delete o3;
-    cout << "オブジェクトの数: " << Object::getObjectNum() <<endl;
+    cout << "オブジェクトの数: " << Object::getObjectNum() << endl;
     delete o2;
     delete o1;
 
-    return 0
+    return 0;
 }
