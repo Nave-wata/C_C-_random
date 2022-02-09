@@ -13,3 +13,7 @@ int Counter::getCount() {
 void Counter::count() {
     m_count++;
 }
+
+void Counter::count(int n) {
+    m_count += n;
+}

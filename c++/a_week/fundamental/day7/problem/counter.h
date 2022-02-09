@@ -10,6 +10,7 @@ class Counter {
         void reset();
         int getCount();
         void count();
+        void count(int);
 };
 
 #endif // _COUNTER_H_
