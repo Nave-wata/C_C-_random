@@ -4,9 +4,13 @@
 class Bar;
 
 class Foo {
+    private:
+        Bar* m_pBar;
+
     public:
+        Foo();
         void hoge();
-        void fuga(Bar*);
+        void fuga();
 };
 
 #endif // _FOO_H_

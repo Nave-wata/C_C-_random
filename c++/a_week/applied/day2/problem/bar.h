@@ -4,7 +4,11 @@
 class Foo;
 
 class Bar {
+    private:
+        Foo* m_pFoo;
+
     public:
+        Bar(Foo*);
         void func1(Foo*);
         void func2();
 };

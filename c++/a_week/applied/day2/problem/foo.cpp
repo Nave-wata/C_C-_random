@@ -1,13 +1,19 @@
 #include "foo.h"
+#include "bar.h"
 #include <iostream>
 
 using namespace std;
 
-void Foo::hoge() {
-    cout << "Foo::hoge" << endl;
+Foo::Foo() {
+    m_pBar = new Bar(this);
 }
 
-void Foo::fuga(Bar* pBar) {
-    Foo* pFoo;
-    Bar* pBar;
+void Foo::hoge() {
+    cout << "Foo::hoge()" << endl;
+}
+
+void Foo::fuga() {
+    m_pBar->func2();
+    cout << "Foo::fuga()" << endl;
+    m_pBar->func2();
 }

@@ -5,8 +5,11 @@
 using namespace std;
 
 int main() {
-    Foo* pFoo;
-    Bar* pBar;
+    Foo pFoo;
+
+    pFoo.hoge();
+    pFoo.fuga();
+    pFoo.hoge();
 
     return 0;
 }
