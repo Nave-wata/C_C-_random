@@ -8,6 +8,7 @@ class Vector {
 
     public:
         Vector();
+        Vector(double, double);
         void set(double x, double y);
         double getX();
         double getY();
