@@ -1,3 +1,4 @@
+/*
 #include "collectionint.h"
 #include <iostream>
 
@@ -41,3 +42,4 @@ void CollectionInt::showArray() {
     }
     cout << endl;
 }
+*/

@@ -5,7 +5,7 @@ using namespace std;
 
 int main() {
     int array[] = { 1, 5, 4, 2, 3 };
-    CollectionInt* c = new CollectionInt(array, 5);
+    CollectionInt<int>* c = new CollectionInt<int>(array, 5);
 
     c->showArray();
 
