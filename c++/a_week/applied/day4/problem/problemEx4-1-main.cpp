@@ -16,7 +16,7 @@ int main() {
     }
 
     cout << "偶数: ";
-    for (i = 0; i < v.size() - 1; i++) {
+    for (i = 0; i < v.size(); i++) {
         if (v[i] % 2 == 0) {
             cout << v[i] << " ";
         }
