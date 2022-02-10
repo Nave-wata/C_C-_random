@@ -1,11 +1,12 @@
 #include <iostream>
+#include <string>
 #include "collectionint.h"
 
 using namespace std;
 
 int main() {
-    int array[] = { 1, 5, 4, 2, 3 };
-    CollectionInt<int>* c = new CollectionInt<int>(array, 5);
+    string array[] = { "A", "BC", "DEF", "GHIJ", "KLMNO"};
+    CollectionInt<string>* c = new CollectionInt<string>(array, 5);
 
     c->showArray();
 

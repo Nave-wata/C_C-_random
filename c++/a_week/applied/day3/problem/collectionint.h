@@ -9,10 +9,10 @@ using namespace std;
 template <typename Type> class CollectionInt {
     private:
         Type* m_pArray;
-        Type m_length;
+        int m_length;
 
     public:
-        CollectionInt(Type*, Type);
+        CollectionInt(Type*, int);
         ~CollectionInt();
         Type getMax();
         Type getMin();
@@ -20,7 +20,7 @@ template <typename Type> class CollectionInt {
 };
 
 template <typename Type>
-CollectionInt<Type>::CollectionInt(Type* array, Type length) {
+CollectionInt<Type>::CollectionInt(Type* array, int length) {
     m_pArray = new Type[length];
     m_length = length;
     for (int i = 0; i < (int) m_length; i++) {
@@ -44,11 +44,33 @@ Type CollectionInt<Type>::getMax() {
     return max;
 }
 
+template <>
+string CollectionInt<string>::getMax() {
+    string max = m_pArray[0];
+    for (int i = 0; i < (int) m_length; i++) {
+        if (max.length() < m_pArray[i].length()) {
+            max = m_pArray[i];
+        }
+    }
+    return max;
+}
+
 template <typename Type>
 Type CollectionInt<Type>::getMin() {
     Type min = m_pArray[0];
     for (int i = 0; i < (int) m_length; i++) {
         if (m_pArray[i] < min) {
+            min = m_pArray[i];
+        }
+    }
+    return min;
+}
+
+template <>
+string CollectionInt<string>::getMin() {
+    string min = m_pArray[0];
+    for (int i = 0; i < (int) m_length; i++) {
+        if (m_pArray[i].length() < min.length()) {
             min = m_pArray[i];
         }
     }
