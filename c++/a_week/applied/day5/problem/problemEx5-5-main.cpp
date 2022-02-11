@@ -14,6 +14,7 @@ int main() {
             que.push(str);
         }
     }
+    std::cout << std::endl;
 
     while (!que.empty()) {
         std::cout << que.front() << std::endl;
