@@ -3,8 +3,9 @@
 
 #include <iostream>
 #include <string>
+#include "airplane.h"
 
-class PassengerPlane {
+class PassengerPlane : public Airplane {
     private:
         std::string m_type;
 

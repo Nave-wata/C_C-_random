@@ -3,8 +3,9 @@
 
 #include <iostream>
 #include <string>
+#include "airplane.h"
 
-class FighterAircraft {
+class FighterAircraft : public Airplane {
     private:
         std::string m_type;
 
