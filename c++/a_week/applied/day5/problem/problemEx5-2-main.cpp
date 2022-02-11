@@ -15,12 +15,23 @@ int main() {
     std::string str;
     std::cin >> str;
 
+    bool flag = true;
     for (int i = 0; i < str.size(); i++) {
-        if (map.find(str[i]) != map.end()) {
-            std::cout << map[str[i]];
+        if (map.find(str[i]) == map.end()) {
+            std::cout << "整数値を入力して下さい";
+            flag = false;
+            break;
         }
-        if ((str.size() - i - 1) % 3 == 0 && i != str.size() - 1) {
-            std::cout << ",";
+    }
+
+    if (flag) {
+        for (int i = 0; i < str.size(); i++) {
+            if (map.find(str[i]) != map.end()) {
+                std::cout << map[str[i]];
+            }
+            if ((str.size() - i - 1) % 3 == 0 && i != str.size() - 1) {
+                std::cout << ",";
+            }
         }
     }
     std::cout << std::endl;
