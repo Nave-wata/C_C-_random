@@ -1,6 +1,7 @@
 #include "pitcher.h"
 #include "catcher.h"
 #include "fielder.h"
+#include "BaseballPlayer.h"
 
 int main(){
     BaseballPlayer* players[9];
