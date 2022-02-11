@@ -20,6 +20,7 @@ int main() {
         std::cout << stk.top() << std::endl;
         stk.pop();
     }
+    std::cout << std::endl;
 
     return 0;
 }

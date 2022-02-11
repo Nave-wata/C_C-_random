@@ -20,6 +20,7 @@ int main() {
         std::cout << que.front() << std::endl;
         que.pop();
     }
+    std::cout << std::endl;
 
     return 0;
 }
