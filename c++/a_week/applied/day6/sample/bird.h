@@ -6,13 +6,9 @@
 
 class Bird {
     public:
-        virtual void sing();
+        virtual void sing() = 0;
         void fly();
 };
-
-void Bird::sing() {
-    std::cout << "鳥が飛びます" << std::endl;
-}
 
 void Bird::fly() {
     std::cout << "鳥が飛びます" << std::endl;
