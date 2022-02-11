@@ -5,7 +5,7 @@
 #include <string>
 
 class Airplane {
-    private:
+    protected:
         std::string m_type;
 
     public:

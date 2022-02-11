@@ -6,9 +6,6 @@
 #include "airplane.h"
 
 class FighterAircraft : public Airplane {
-    private:
-        std::string m_type;
-
     public:
         FighterAircraft();
         std::string getType();
