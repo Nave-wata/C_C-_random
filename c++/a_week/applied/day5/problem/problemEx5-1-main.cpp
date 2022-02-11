@@ -15,11 +15,16 @@ int main() {
         map[english[i]] = japanese[i];
     }
 
+    std::map<string, string>::iterator itr;
     string str;
 
     cout << "英語で動物の名前を入力して下さい: ";
     std::cin >> str;
-    cout << "「" << map[str] << "」です" << endl;
+    if (map.find(str) != map.end()) {
+        cout << "「" << map[str] << "」です" << endl;
+    } else {
+        cout << "対応するデータは登録されていません" << endl;
+    }
 
     return 0;
 }
