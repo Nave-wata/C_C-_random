@@ -11,9 +11,18 @@ class BaseballPlayer{
         std::string m_name;    //  名前
 
     public:
-        int getNumber();    //  名前の取得
-        std::string getKind();    //  種類の取得
-        std::string getName();    //  名前の取得
+        int getNumber(){
+            return m_number;
+        }
+
+        std::string getKind() {
+            return m_kind;
+        }
+
+        std::string getName() {
+            return m_name;
+        }
+
         virtual void play()=0;    //  プレイ（純粋仮関数)
 };
 
