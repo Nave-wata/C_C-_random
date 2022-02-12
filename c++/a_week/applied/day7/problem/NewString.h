@@ -15,6 +15,7 @@ class NewString{
         NewString(string value); // 値を代入するコンストラクタ①（文字列から）
         NewString(NewString& value); // 値を代入するコンストラクタ②（他のクラスから)
         NewString& operator= (NewString& n); // 値を代入
+        bool operator == (NewString& n);
         string getValue(); // stringで値を取得
 };
 

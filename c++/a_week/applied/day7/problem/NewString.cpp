@@ -21,6 +21,14 @@ NewString& NewString::operator= (NewString& n) {
     return *this;
 }
 
+bool NewString::operator == (NewString& n) {
+    if (m_value == n.m_value) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 //  stringで値を取得
 string NewString::getValue() {
     return m_value;
