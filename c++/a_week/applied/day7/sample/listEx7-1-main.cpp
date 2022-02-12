@@ -4,7 +4,7 @@
 void vec(std::string, Vector2&);
 
 int main(){
-    Vector2 v1,v2,v3;
+    Vector2 v1,v2,v3, tmp;
     //  ベクトルに値を代入
     v1.x = 1.0;
     v1.y = 2.0;
@@ -12,7 +12,8 @@ int main(){
     v3 = 4.0 * v1;      //  ベクトルのスカラー倍
     vec("v1=", v1);
     vec("v2=", v2);
-    vec("v1 + v2=", v1 + v2);
+    tmp = v1 + v2;
+    vec("v1 + v2=", tmp);
     vec("v3=", v3);
     v3 += v1;           //  代入演算子（+=）
     vec("v3=",v3);
