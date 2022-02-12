@@ -6,7 +6,7 @@ NewString::NewString() {
 }
 
 //  値を代入するコンストラクタ①（文字列から）
-NewString::NewString(string value) {
+NewString::NewString(std::string value) {
     m_value = value;
 }
 
@@ -30,6 +30,6 @@ bool NewString::operator == (NewString& n) {
 }
 
 //  stringで値を取得
-string NewString::getValue() {
+std::string NewString::getValue() {
     return m_value;
 }
