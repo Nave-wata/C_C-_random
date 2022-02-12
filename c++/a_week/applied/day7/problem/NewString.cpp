@@ -22,7 +22,7 @@ NewString& NewString::operator= (NewString& n) {
 }
 
 bool NewString::operator == (NewString& n) {
-    if (m_value == n.m_value) {
+    if (strcasecmp(m_value.c_str(), n.m_value.c_str()) == 0) {
         return true;
     } else {
         return false;
