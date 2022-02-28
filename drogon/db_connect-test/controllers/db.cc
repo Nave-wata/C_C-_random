@@ -15,7 +15,7 @@ void db::connectDB(const HttpRequestPtr &req,
             LOG_DEBUG << mysql_error(conn);
         }
 
-        if (mysql_query(conn, "SHOW TABLES")) {
+        if (mysql_query(conn, QUERY)) {
             LOG_DEBUG << mysql_error(conn);
         }
 
@@ -24,6 +24,7 @@ void db::connectDB(const HttpRequestPtr &req,
         int i = 0;
         while ((row = mysql_fetch_row(res)) != NULL) {
             ret[i] = row[0];
+            i++;
         }
 
         mysql_free_result(res);
