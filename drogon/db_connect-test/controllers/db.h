@@ -7,8 +7,8 @@ using namespace drogon;
 
 class db : public drogon::HttpController<db> {
 
-    const char* MY_HOSTNAME = "192.168.3.100";
-    const char* MY_DATABASE = "mariadb";
+    const char* MY_HOSTNAME = "localhost";
+    const char* MY_DATABASE = "mysql";
     const char* MY_USERNAME = "test";
     const char* MY_PASSWORD = "0000";
     const char* MY_SOCKET = NULL;

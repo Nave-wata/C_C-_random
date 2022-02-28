@@ -13,7 +13,7 @@ void db::connectDB(const HttpRequestPtr &req,
                 MY_PORT_NO, MY_SOCKET, MY_OPT)) {
             LOG_DEBUG << "SUCCESS";
         } else {
-            LOG_DEBUG << "FAIL";
+            LOG_DEBUG << "FAIL: " << mysql_error(conn);
         }
     } catch (char *e) {
         LOG_DEBUG << "ERROR";
