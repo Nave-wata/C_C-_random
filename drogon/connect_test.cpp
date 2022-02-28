@@ -7,8 +7,7 @@
 #define DBPASS "0000"
 #define DBNAME "information_schema"
 
-int main()
-{
+int main() {
 
        MYSQL *conn;
        MYSQL_RES *res;
