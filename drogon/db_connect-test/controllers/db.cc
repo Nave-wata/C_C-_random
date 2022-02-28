@@ -21,8 +21,9 @@ void db::connectDB(const HttpRequestPtr &req,
 
         res = mysql_use_result(conn);
 
+        int i = 0;
         while ((row = mysql_fetch_row(res)) != NULL) {
-            ret["name"] = row[0];
+            ret[i] = row[0];
         }
 
         mysql_free_result(res);
