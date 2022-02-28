@@ -1,7 +1,7 @@
 #include "db.h"
 
 void db::connectDB(const HttpRequestPtr &req,
-                  std::function<void(const HttpResponsePtr &)> &&callback) const {
+                  std::function<void(const HttpResponsePtr &)> &&callback) {
     LOG_DEBUG << "Accessed: ";
 
     conn = mysql_init(NULL);

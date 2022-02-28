@@ -15,5 +15,5 @@ class db : public drogon::HttpController<db> {
         METHOD_LIST_END
 
         void connectDB(const HttpRequestPtr &req,
-                      std::function<void(const HttpResponsePtr &)> &&callback) const;
+                      std::function<void(const HttpResponsePtr &)> &&callback);
 };
