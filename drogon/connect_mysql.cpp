@@ -17,7 +17,7 @@ int main()
 {
     try {
         sql::mysql::MySQL_Driver *driver = sql::mysql::get_mysql_driver_instance();
-        unique_ptr<sql::Connection> con(driver->connect(HOST, USER, PASSWORD));
+        unique_ptr<sql::Connection> con(driver->connect("192.168.3.100:3306", "test", "0000"));
         unique_ptr<sql::Statement> stmt(con->createStatement());
 
 
