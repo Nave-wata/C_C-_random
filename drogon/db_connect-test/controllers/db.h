@@ -6,7 +6,7 @@
 using namespace drogon;
 
 class db : public drogon::HttpController<db> {
-    const char* QUERY = "SHOW TABLES";
+    const char* QUERY = "SELECT user, password, plugin, authentication_string from mysql.user";
     const char* MY_HOSTNAME = "localhost";
     const char* MY_DATABASE = "mysql";
     const char* MY_USERNAME = "test";
