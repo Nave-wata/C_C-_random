@@ -53,35 +53,35 @@ bool Proc::execMain()
         conn = mysql_init(NULL);
 
         // Establish a MySQL connection
-        if (!mariadb_real_connect(
+        if (!mysql_real_connect(
                 conn,
                 MY_HOSTNAME, MY_USERNAME,
                 MY_PASSWORD, MY_DATABASE,
                 MY_PORT_NO, MY_SOCKET, MY_OPT)) {
-            cerr << mariadb_error(conn) << endl;
+            cerr << mysql_error(conn) << endl;
             return false;
         }
 
         // Execute a sql statement
-        if (mariadb_query(conn, "SHOW TABLES")) {
-            cerr << mariadb_error(conn) << endl;
+        if (mysql_query(conn, "SHOW TABLES")) {
+            cerr << mysql_error(conn) << endl;
             return false;
         }
 
         // Get a result set
-        res = mariadb_use_result(conn);
+        res = mysql_use_result(conn);
 
         // Fetch a result set
         cout << "* MySQL - SHOW TABLES in `"
              << MY_DATABASE << "`" << endl;
-        while ((row = mariadb_fetch_row(res)) != NULL)
+        while ((row = mysql_fetch_row(res)) != NULL)
             cout << row[0] << endl;
 
         // Release memories
-        mariadb_free_result(res);
+        mysql_free_result(res);
 
         // Close a MySQL connection
-        mariadb_close(conn);
+        mysql_close(conn);
     } catch (char *e) {
         cerr << "[EXCEPTION] " << e << endl;
         return false;
