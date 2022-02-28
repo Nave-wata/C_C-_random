@@ -2,7 +2,7 @@
  * Example to connect to MariaDB(MySQL)
  */
 #include <iostream>
-#include <mysql/mysql.h>
+#include <mariadb/mysql.h>
 #include <string>
 
 using namespace std;
