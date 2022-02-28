@@ -2,7 +2,7 @@
 
 void db::connectDB(const HttpRequestPtr &req,
                   std::function<void(const HttpResponsePtr &)> &&callback) {
-    LOG_DEBUG << "try connect mariadb";
+    Json::Value ret;
 
     try {
         conn = mysql_init(NULL);
@@ -11,20 +11,26 @@ void db::connectDB(const HttpRequestPtr &req,
                 MY_HOSTNAME, MY_USERNAME,
                 MY_PASSWORD, MY_DATABASE,
                 MY_PORT_NO, MY_SOCKET, MY_OPT)) {
-            LOG_DEBUG << "SUCCESS";
         } else {
-            LOG_DEBUG << "FAIL: " << mysql_error(conn);
+            LOG_DEBUG << mysql_error(conn);
         }
+
+        if (mysql_query(conn, "SHOW TABLES")) {
+            LOG_DEBUG << mysql_error(conn);
+        }
+
+        res = mysql_use_result(conn);
+
+        while ((row = mysql_fetch_row(res)) != NULL) {
+            ret["name"] = row[0];
+        }
+
+        mysql_free_result(res);
+        mysql_close(conn);
     } catch (char *e) {
-        LOG_DEBUG << "ERROR";
+        LOG_DEBUG << "[EXCEPTION] " << e;
     }
 
-    Json::Value ret;
-
-    ret["message"] = "Hello";
-
     auto resp = HttpResponse::newHttpJsonResponse(ret);
-
-    mysql_close(conn);
     callback(resp);
 }
