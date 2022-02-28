@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include <mariadb/mysql.h>
 
-#define DBHOST "localhost"
-#define DBUSER "myuser"
-#define DBPASS "mypass"
-#define DBNAME "mydb"
+#define DBHOST "192.168.3.100"
+#define DBUSER "test"
+#define DBPASS "0000"
+#define DBNAME "information_schema"
 
 int main()
 {
