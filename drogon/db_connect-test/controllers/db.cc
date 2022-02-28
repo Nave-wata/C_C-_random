@@ -1,5 +1,4 @@
 #include "db.h"
-#include <mariadb/conncpp.hpp>
 
 void db::connectDB(const HttpRequestPtr &req,
                   std::function<void(const HttpResponsePtr &)> &&callback) const {

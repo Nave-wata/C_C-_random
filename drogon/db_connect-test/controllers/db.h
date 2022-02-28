@@ -1,6 +1,7 @@
 #pragma once
 
 #include <drogon/HttpController.h>
+#include <mariadb/mysql.h>
 
 using namespace drogon;
 
