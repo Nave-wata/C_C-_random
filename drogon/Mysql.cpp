@@ -36,10 +36,10 @@ public:
 Proc::Proc()
 {
     // Initialize constants
-    MY_HOSTNAME = "localhost";
-    MY_DATABASE = "mysql";
-    MY_USERNAME = "root";
-    MY_PASSWORD = "7621mizuiko3701";
+    MY_HOSTNAME = "192.168.3.100";
+    MY_DATABASE = "mariadb";
+    MY_USERNAME = "test";
+    MY_PASSWORD = "0000";
     MY_SOCKET   = NULL;
 }
 
