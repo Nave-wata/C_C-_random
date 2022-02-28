@@ -1,7 +1,7 @@
 #include "db.h"
 
-void db::connectDB(const HttpRequestPtr &req, std::function<void(const HttpRequestPtr &)> && callback, std::string userId) const {
-    LOG_DEBUG << "Accessed: " << userId;
+void db::connectDB(const HttpRequestPtr &req, std::function<void(const HttpRequestPtr &)> &&callback, std::string a) const {
+    LOG_DEBUG << "Accessed: ";
 
     Json::Value ret;
 
