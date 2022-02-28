@@ -17,5 +17,5 @@ class db : public drogon::HttpController<db> {
     // your declaration of processing function maybe like this:
     // void get(const HttpRequestPtr& req, std::function<void (const HttpRespon>
     // void your_method_name(const HttpRequestPtr& req, std::function<void (con>
-    void connectDB(const HttpRequestPtr&, std::function<void(const HttpRequestPtr &)> && callback) const;
+    void connectDB(const HttpRequestPtr &req, std::function<void(const HttpResponsePtr &)> &&callback) const;
 };
