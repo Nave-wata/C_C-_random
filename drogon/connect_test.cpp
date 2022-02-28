@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <mysql/mysql.h>
+#include <mariadb/mysql.h>
 
 #define DBHOST "localhost"
 #define DBUSER "myuser"
