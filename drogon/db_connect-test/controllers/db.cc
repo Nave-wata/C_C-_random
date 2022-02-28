@@ -7,17 +7,13 @@ void db::connectDB(const HttpRequestPtr &req,
     try {
         conn = mysql_init(NULL);
         if (mysql_real_connect(
-            conn,
-            "192.168.3.100",
-            "test",
-            "0000",
-            "3306",
-            NULL,
-            0
-        )) {
+                conn,
+                MY_HOSTNAME, MY_USERNAME,
+                MY_PASSWORD, MY_DATABASE,
+                MY_PORT_NO, MY_SOCKET, MY_OPT)) {
             LOG_DEBUG << "SUCCESS";
         } else {
-            LOG_DEBUG << "FAIL"
+            LOG_DEBUG << "FAIL";
         }
     } catch (char *e) {
         LOG_DEBUG << "ERROR";
