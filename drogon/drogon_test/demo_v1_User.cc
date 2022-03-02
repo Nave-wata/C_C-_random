@@ -15,7 +15,7 @@ void User::getToken(const HttpRequestPtr &req,
 
 void User::getInfo(const HttpRequestPtr &req,
                    std::function<void(const HttpResponsePtr &)> &&callback,
-                   std::string userId, const std::string &token) const {
+                   std::string userId, const std::string &token) {
 
     Json::Value ret;
 
