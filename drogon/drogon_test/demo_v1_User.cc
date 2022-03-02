@@ -1,16 +1,14 @@
 #include "demo_v1_User.h"
 using namespace demo::v1;
 // add definition of your processing function here
-
-void User::login(const HttpRequestPtr &req,
+void User::getToken(const HttpRequestPtr &req,
                  std::function<void(const HttpResponsePtr &)> &&callback,
                  std::string userId, const std::string &password) {
-    LOG_DEBUG << "User " << userId << " login";
-    // Authentication algorithm, read database, verify identity, etc...
-    //...
+
+    TOKEN = drogon::utils::getUuid();
     Json::Value ret;
     ret["result"] = "ok";
-    //ret["token"] = drogon::utils::getUuid();
+    ret["token"] = TOKEN;
     auto resp = HttpResponse::newHttpJsonResponse(ret);
     callback(resp);
 }
@@ -18,15 +16,21 @@ void User::login(const HttpRequestPtr &req,
 void User::getInfo(const HttpRequestPtr &req,
                    std::function<void(const HttpResponsePtr &)> &&callback,
                    std::string userId, const std::string &token) const {
-    LOG_DEBUG << "User " << userId << ", token " << token << " get his information";
 
-    // Verify the validity of the token, etc.
-    // Read the database or cache to get user information
     Json::Value ret;
-    ret["result"] = "ok";
-    ret["user_name"] = "Jack";
-    ret["user_id"] = userId;
-    ret["gender"] = 1;
+
+    if (TOKEN == token) {
+        ret["result"] = "ok";
+        ret["user_name"] = "Jack";
+        ret["user_id"] = userId;
+        ret["token"] = TOKEN;
+        ret["gender"] = 1;
+    } else {
+        ret["result"] = "no";
+        LOG_DEBUG << "Not " << "token";
+    }
+
+    TOKEN = drogon::utils::getUuid();
     auto resp = HttpResponse::newHttpJsonResponse(ret);
     callback(resp);
 }
