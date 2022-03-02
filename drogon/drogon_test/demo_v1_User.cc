@@ -4,13 +4,13 @@ using namespace demo::v1;
 
 void User::login(const HttpRequestPtr &req,
                  std::function<void(const HttpResponsePtr &)> &&callback,
-                 std::string &&userId, const std::string &password) {
+                 std::string userId, const std::string &password) {
     LOG_DEBUG << "User " << userId << " login";
     // Authentication algorithm, read database, verify identity, etc...
     //...
     Json::Value ret;
     ret["result"] = "ok";
-    ret["token"] = drogon::utils::getUuid();
+    //ret["token"] = drogon::utils::getUuid();
     auto resp = HttpResponse::newHttpJsonResponse(ret);
     callback(resp);
 }
@@ -18,7 +18,7 @@ void User::login(const HttpRequestPtr &req,
 void User::getInfo(const HttpRequestPtr &req,
                    std::function<void(const HttpResponsePtr &)> &&callback,
                    std::string userId, const std::string &token) const {
-    LOG_DEBUG << "User " << userId << " get his information";
+    LOG_DEBUG << "User " << userId << ", token " << token << " get his information";
 
     // Verify the validity of the token, etc.
     // Read the database or cache to get user information
