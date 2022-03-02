@@ -1,9 +1,10 @@
 #include "demo_v1_User.h"
 using namespace demo::v1;
-// add definition of your processing function here
+
 void User::getToken(const HttpRequestPtr &req,
                  std::function<void(const HttpResponsePtr &)> &&callback,
-                 std::string userId, const std::string &password) {
+                 std::string userId,
+                 const std::string &password) {
 
     TOKEN = drogon::utils::getUuid();
     Json::Value ret;
@@ -15,7 +16,8 @@ void User::getToken(const HttpRequestPtr &req,
 
 void User::getInfo(const HttpRequestPtr &req,
                    std::function<void(const HttpResponsePtr &)> &&callback,
-                   std::string userId, const std::string &token) {
+                   std::string userId,
+                   const std::string &token) {
 
     Json::Value ret;
 
@@ -27,7 +29,7 @@ void User::getInfo(const HttpRequestPtr &req,
         ret["gender"] = 1;
     } else {
         ret["result"] = "no";
-        LOG_DEBUG << "Not " << "token";
+        LOG_DEBUG << "Not token";
     }
 
     TOKEN = drogon::utils::getUuid();
